@@ -10,7 +10,7 @@ const NotFound = () => {
       <div>
         <div>
           <h1 className='text-2xl'>Oops!</h1>
-          <p>We couldn't find that page</p>
+          <p>We couldn&apos;t find that page</p>
         </div>
         <div>
           <p>Maybe you can find what you need here?</p>
