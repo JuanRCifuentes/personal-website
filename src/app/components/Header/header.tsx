@@ -1,7 +1,19 @@
-import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react'
+import { Menu, MenuButton, MenuItems, Transition } from '@headlessui/react'
 import Link from 'next/link'
 
-const header = () => {
+interface LinkProps {
+    name: string;
+    href: string;
+}
+
+const Header = () => {
+    const links: LinkProps[] = [
+        { name: 'About', href: '/' },
+        { name: 'Projects', href: '/projects' },
+        { name: 'Resume', href: '/resume' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Contact', href: '/contact' }
+    ]
 
     return (
         <div className= 'sticky top-0 z-40 w-full bg-transparent-white backdrop-blur-xl flex-none border-b'>
@@ -25,53 +37,14 @@ const header = () => {
                         leaveTo="opacity-0"
                     >
                         <MenuItems anchor="bottom end" className="flex flex-col z-50 p-3 gap-6 bg-transparent-white backdrop-blur-xl shadow-2xl w-3/4 rounded-lg mt-5">
-                            <MenuItem>
-                                <Link href='/'>
-                                    About
-                                </Link>
-                            </MenuItem>
-                            <MenuItem>
-                                <Link href='/projects'>
-                                    Projects
-                                </Link>
-                            </MenuItem>
-                            <MenuItem>
-                                <Link href='/resume'>
-                                    Resume
-                                </Link>
-                            </MenuItem>
-                            <MenuItem>
-                                <Link href='/blog'>
-                                    Blog
-                                </Link>
-                            </MenuItem>
-                            <MenuItem>
-                                <Link href='/contact'>
-                                    Contact
-                                </Link>
-                            </MenuItem>
+                            <HeaderLinks params={{links}}/>
                         </MenuItems>
                     </Transition>
-                    
                 </Menu>
                 </div>
                 <div className='relative hidden sm:flex items-center ml-auto'>
                     <div className='flex text-sm leading-6 font-semibold space-x-8'>
-                        <Link href='/'>
-                            About
-                        </Link>
-                        <Link href='/projects'>
-                            Projects
-                        </Link>
-                        <Link href='/resume'>
-                            Resume
-                        </Link>
-                        <Link href='/blog'>
-                            Blog
-                        </Link>
-                        <Link href='/contact'>
-                            Contact
-                        </Link>
+                        <HeaderLinks params={{links}}/>
                     </div>
                 </div>
             </div>
@@ -79,4 +52,23 @@ const header = () => {
     )
 }
 
-export default header
+type HeaderLinksProps = {
+    params: {
+        links: Array<{ name: string, href: string }>
+    }
+}
+
+const HeaderLinks = (props: HeaderLinksProps) => {
+    const { links } = props.params
+    return (
+        <>
+            {links.map((link, index) => (
+                <Link key={index} href={link.href}>
+                    {link.name}
+                </Link>
+            ))}
+        </>    
+    )
+}
+
+export default Header

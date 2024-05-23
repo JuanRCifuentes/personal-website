@@ -4,12 +4,9 @@ import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className='flex flex-col'>
-      <div className='text-center font-bold my-5'>
-        <a href="/" className="text-3xl">Juan R. Cifuentes</a>
-      </div>
+    <div className='flex flex-col p-5 gap-5'>
 
-      <ul className='flex flex-col sm:flex-row justify-center text-center gap-5 my-3'>
+      <ul className='flex flex-col sm:hidden justify-center text-center gap-5'>
         <Link href="/">About</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/resume">Resume</Link>
@@ -17,7 +14,7 @@ const Footer = () => {
         <Link href="/contact">Contact</Link>
       </ul>
 
-      <div className="flex justify-center gap-5 mt-3 mb-5 sm:my-3 text-2xl">
+      <div className="flex justify-center gap-5 text-2xl">
         <a href="https://github.com/JuanRCifuentes" target='_blank'><FaGithub /></a>
         <a href="https://www.linkedin.com/in/juanrcifuentes" target='_blank'><FaLinkedin /></a>
         <a href='https://wa.me/573138690872' target='_blank'><FaWhatsapp /></a>
