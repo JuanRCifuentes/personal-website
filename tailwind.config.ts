@@ -9,7 +9,8 @@ const config: Config = {
     colors: {
       'navy': '#0a192f',
       'gold': '#e89c31',
-      'white': '#ffffff',
+      'white': 'rgb(255, 255, 255)',
+      'transparent-white': 'rgba(255, 255, 255, 0.6)',
       'gray': '#8892b0',
     }
   },
