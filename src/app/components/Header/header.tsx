@@ -32,7 +32,7 @@ const header = () => {
                             </MenuItem>
                             <MenuItem>
                                 <Link href='/projects'>
-                                    Proyects
+                                    Projects
                                 </Link>
                             </MenuItem>
                             <MenuItem>
@@ -61,7 +61,7 @@ const header = () => {
                             About
                         </Link>
                         <Link href='/projects'>
-                            Proyects
+                            Projects
                         </Link>
                         <Link href='/resume'>
                             Resume
