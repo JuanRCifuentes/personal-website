@@ -11,7 +11,7 @@ const ComingSoon = (props: ComingSoonProps) => {
     return (
         <div className='p-5'>
             <div className='text-center text-5xl p-10'>Coming Soon</div>
-            <div className='text-center text-2xl'>{pageName} page is getting done</div>
+            <div className='text-center text-2xl'>{pageName} page is under construction</div>
         </div>
     )
 }
