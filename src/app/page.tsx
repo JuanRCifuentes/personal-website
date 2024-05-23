@@ -1,8 +1,10 @@
 import React from 'react'
 
+import AboutPage from './about/about'
+
 const Page = () => {
   return (
-    <div>Hello, World! (from Next.js)</div>
+    <AboutPage />
   )
 }
 
