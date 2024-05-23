@@ -54,7 +54,7 @@ const Header = () => {
 
 type HeaderLinksProps = {
     params: {
-        links: Array<{ name: string, href: string }>
+        links: Array<LinkProps>
     }
 }
 

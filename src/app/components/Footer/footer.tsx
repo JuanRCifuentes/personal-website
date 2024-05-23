@@ -21,7 +21,7 @@ const Footer = () => {
       </div>
 
       <div className="flex justify-center">
-        <div className='text-xs'>&copy; Juan R. Cifuentes. All rights reserved.</div>
+        <div className='text-xs'>&copy; 2024 Juan R. Cifuentes. All rights reserved.</div>
       </div>
     </div>
   )
