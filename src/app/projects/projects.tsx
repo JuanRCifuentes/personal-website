@@ -1,8 +1,11 @@
 import React from 'react'
+import ComingSoon from '../components/comingSoon'
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <>
+      <ComingSoon params={{pageName: 'Projects'}}/>
+    </>
   )
 }
 
