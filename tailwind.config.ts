@@ -11,7 +11,8 @@ const config: Config = {
       'gold': '#e89c31',
       'white': 'rgb(255, 255, 255)',
       'transparent-white': 'rgba(255, 255, 255, 0.6)',
-      'gray': '#8892b0',
+      'soft-gray': '#e7e7e7',
+      'gray': '#333333',
     }
   },
   plugins: [],
