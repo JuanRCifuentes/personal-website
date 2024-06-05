@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from './card'
 
-
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 import { IoMailOutline } from "react-icons/io5";
 
