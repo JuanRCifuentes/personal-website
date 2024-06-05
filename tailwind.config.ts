@@ -12,7 +12,7 @@ const config: Config = {
       'white': 'rgb(255, 255, 255)',
       'transparent-white': 'rgba(255, 255, 255, 0.6)',
       'soft-gray': '#e7e7e7',
-      'gray': '#333333',
+      'gray': '#818181',
     }
   },
   plugins: [],
