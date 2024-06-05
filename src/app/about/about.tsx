@@ -28,7 +28,15 @@ const AboutPage = () => {
         </div>
       </div>
       <div className='py-3 text-xl'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus rutrum est. Proin mattis massa vitae urna auctor, sed molestie ipsum lacinia. Fusce lobortis non sem nec pharetra. Quisque vitae laoreet dolor. Etiam at leo a nisl eleifend malesuada nec et ligula. In nec urna hendrerit ligula tincidunt aliquam non vitae nibh. Nullam egestas aliquam dui quis lacinia.
+        <p className='mb-3'>
+          Hi! I’m a data enthusiast with a passion for solving complex problems. My journey began as a Mechanical Engineer, where I honed my analytical skills and developed a solid foundation in programming.
+        </p>
+        <p className='mb-3'>
+          I’ve been a full-stack developer for several years, building web applications and data projects with React, Python, Azure, and .NET.
+        </p>
+        <p>
+          Currently, I’m diving into data science, exploring predictive modeling, natural language processing, and deep learning. My toolbox includes Python, SQL, and frameworks like TensorFlow and PyTorch.
+        </p>
       </div>
       <div className='py-3 text-xl'>
         Interested in collaborating? <Link href="/contact">Send me a message</Link>
