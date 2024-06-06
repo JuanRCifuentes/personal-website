@@ -20,7 +20,7 @@ const AboutPage = () => {
     <div>
       <div className='flex flex-col-reverse sm:flex-row mb-3'>
         <div className='my-auto flex flex-col w-full'>
-          <div className='text-3xl mb-5 sm:mb-2 font-semibold'>
+          <div className='text-3xl mb-5 sm:mb-2 font-semibold dark:text-gold'>
             {aboutData.name}
           </div>
           <div className='flex flex-col sm:flex-row text-xl text-gray mb-5 sm:mb-3 font-semibold'>
@@ -38,7 +38,7 @@ const AboutPage = () => {
           </div>
         </div>
         <div className='min-w-72 w-full mb-7 sm:my-2'>
-          <div className='mx-auto h-44 min-w-44 w-44 bg-navy rounded-full'></div>
+          <div className='mx-auto h-44 min-w-44 w-44 bg-navy dark:bg-gold rounded-full'></div>
         </div>
       </div>
       <div className='flex flex-col py-3 text-xl gap-3'>
