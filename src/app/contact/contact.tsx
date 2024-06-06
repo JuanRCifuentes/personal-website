@@ -13,7 +13,7 @@ const Contact = () => {
                     Let’s connect
                 </h3>
                 <p className="mt-3">
-                    I'm here to help and answer any question you might have.
+                    I&apos;m here to help and answer any question you might have.
                 </p>
             </div>
             <div>
@@ -22,8 +22,8 @@ const Contact = () => {
                       <div className='mb-3 text-2xl text-center'>Social Media</div>
                       {contactLinks.map((item, idx) => (
                           item.kind === 'social_media' && (
-                            <div className='h-40 mb-10'>
-                                <div key={idx} className="w-12 h-12 rounded-full border flex items-center justify-center text-gray-700 text-2xl mb-2">
+                            <div key={idx} className='h-40 mb-10'>
+                                <div className="w-12 h-12 rounded-full border flex items-center justify-center text-gray-700 text-2xl mb-2">
                                     {item.icon}
                                 </div>
                                 <h4 className="text-gray-800 text-lg font-medium xl:text-xl">
@@ -43,8 +43,8 @@ const Contact = () => {
                       <div className='mb-3 text-2xl text-center'>Directly</div>
                       {contactLinks.map((item, idx) => (
                           item.kind === 'directly' && (
-                            <div className='h-40 mb-10'>
-                                <div key={idx} className="w-12 h-12 rounded-full border flex items-center justify-center text-gray-700 text-2xl mb-2">
+                            <div key={idx} className='h-40 mb-10'>
+                                <div className="w-12 h-12 rounded-full border flex items-center justify-center text-gray-700 text-2xl mb-2">
                                     {item.icon}
                                 </div>
                                 <h4 className="text-gray-800 text-lg font-medium xl:text-xl">
