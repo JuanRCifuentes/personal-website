@@ -13,7 +13,7 @@ const Card: React.FC<CardProps> = (props) => {
     return (
         <a href={url} target='_blank'>
             <div className='rounded-xl shadow-lg overflow-hidden'>
-                <div className='flex flex-row justify-start py-5 gap-2 hover:bg-soft-gray dark:hover:bg-gray'>
+                <div className='flex flex-row justify-start py-5 gap-2'>
                     <div className='flex w-20 justify-center my-auto ml-2'>
                         <div className='text-3xl'>{icon}</div>
                     </div>

@@ -15,12 +15,10 @@ export const metadata: Metadata = {
 export default function RootLayout( {children}: {children: React.ReactNode} ) {
   return (
     <html lang="en" className={roboto.className}>
-      <body className='dark:bg-navy dark:text-soft-gray'>
+      <body>
         <AppWrapper>
-          <Header/>
-          <div className='text-center sm:text-left mx-10 my-10 lg:mx-20 xl:mx-40'>
+          <Header />
             {children}
-          </div>
           <Footer />
         </AppWrapper>
       </body>

@@ -8,7 +8,7 @@ const Footer = () => {
   const { websitePages, contactLinks } = useAppContext()
 
   return (
-    <div className='border-t flex flex-col p-5 gap-5 dark:border-gray'>
+    <div className='border-t flex flex-col p-5 gap-5'>
 
       <ul className='flex flex-col sm:hidden justify-center text-center text-xl gap-5 mb-5'>
         { websitePages.map((page, index) => (
@@ -18,7 +18,7 @@ const Footer = () => {
 
       <div className="flex justify-center gap-5 text-2xl">
         { contactLinks.map((link, index) => (
-          <a className="hover:text-gold" href={link.url} target='_blank' key={index}>{link.icon}</a>
+          <a className="" href={link.url} target='_blank' key={index}>{link.icon}</a>
         ))}
       </div>
 

@@ -9,7 +9,7 @@ const Header = () => {
     const { websitePages } = useAppContext()
 
     return (
-        <div className= 'sticky top-0 z-40 w-full bg-transparent-white dark:bg-navy backdrop-blur-xl flex-none border-b border-gray'>
+        <div className= 'sticky top-0 z-40 w-full backdrop-blur-xl flex-none border-b'>
             <div className='flex flex-row mx-4 sm:mx-0 py-4 sm:px-8'>
                 <div className='flex w-fit text-2xl'>
                     Juan R. Cifuentes
@@ -29,9 +29,9 @@ const Header = () => {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <MenuItems anchor="bottom end" className="flex flex-col z-50 p-3 gap-6 bg-transparent-white backdrop-blur-xl shadow-2xl w-3/4 rounded-lg mt-5">
+                        <MenuItems anchor="bottom end" className="flex flex-col z-50 p-3 gap-6 backdrop-blur-xl shadow-2xl w-3/4 rounded-lg mt-5">
                             {websitePages.map((websitePage, index) => (
-                                <Link className="hover:text-gold" key={index} href={websitePage.path}>
+                                <Link key={index} href={websitePage.path}>
                                     {websitePage.name}
                                 </Link>
                             ))}
@@ -42,7 +42,7 @@ const Header = () => {
                 <div className='relative hidden sm:flex items-center ml-auto'>
                     <div className='flex text-sm leading-6 font-semibold space-x-8'>
                         {websitePages.map((websitePage, index) => (
-                            <Link className="hover:text-gold" key={index} href={websitePage.path}>
+                            <Link key={index} href={websitePage.path}>
                                 {websitePage.name}
                             </Link>
                         ))}
