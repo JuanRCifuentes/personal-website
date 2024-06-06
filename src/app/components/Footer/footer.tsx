@@ -1,11 +1,24 @@
+"use client";
+
 import Link from 'next/link';
-import React from 'react'
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
-import { IoMailOutline } from "react-icons/io5";
+import React, { useEffect, useState } from 'react'
+
+import { fetchContactLinks, IContactLink } from '../../../services/fetchService';
 
 const Footer = () => {
+  const emptyContactLinks: IContactLink[] = [];
+  const [ contactLinks, setContactLinks ] = useState(emptyContactLinks);
+
+  useEffect(() => {
+    fetchContactLinks()
+      .then(data => {
+          if(data){ setContactLinks(data) }
+        })
+      .catch(error => { console.error(error) });
+  } , []);
+
   return (
-    <div className='border-t flex flex-col p-5 gap-5'>
+    <div className='border-t flex flex-col p-5 gap-5 dark:border-gray dark:text-soft-gray'>
 
       <ul className='flex flex-col sm:hidden justify-center text-center text-xl gap-5 mb-5'>
         <Link href="/">About</Link>
@@ -16,10 +29,9 @@ const Footer = () => {
       </ul>
 
       <div className="flex justify-center gap-5 text-2xl">
-        <a href="https://github.com/JuanRCifuentes" target='_blank'><FaGithub /></a>
-        <a href="https://www.linkedin.com/in/juanrcifuentes" target='_blank'><FaLinkedin /></a>
-        <a href='https://wa.me/573138690872' target='_blank'><FaWhatsapp /></a>
-        <a href='mailto:info@juanrcifuentes.com' target='_blank'><IoMailOutline /></a>
+        { contactLinks.map((link, index) => (
+          <a className="hover:text-gold" href={link.url} target='_blank' key={index}>{link.icon}</a>
+        ))}
       </div>
 
       <div className="flex justify-center">

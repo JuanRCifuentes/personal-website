@@ -21,9 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={roboto.className}>
-      <body>
+      <body className='dark:bg-navy'>
         <Header/>
-        <div className='text-center sm:text-left mx-10 my-10 lg:mx-20 xl:mx-40'>
+        <div className='text-center sm:text-left mx-10 my-10 lg:mx-20 xl:mx-40 dark:text-soft-gray'>
           {children}
         </div>
         <Footer />
