@@ -1,9 +1,12 @@
+"use client"
+
 import { Menu, MenuButton, MenuItems, Transition } from '@headlessui/react'
 import Link from 'next/link'
 
-import { websitePages } from '@/utils/pages'
+import { useAppContext } from '@/context/appContext'
 
 const Header = () => {
+    const { websitePages } = useAppContext()
 
     return (
         <div className= 'sticky top-0 z-40 w-full bg-transparent-white dark:bg-navy backdrop-blur-xl flex-none border-b border-gray'>

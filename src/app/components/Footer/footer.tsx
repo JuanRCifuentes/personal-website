@@ -4,11 +4,13 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
 import { fetchContactLinks, IContactLink } from '@/services/fetchService';
-import { websitePages } from '@/utils/pages'
+import { useAppContext } from '@/context/appContext';
 
 const Footer = () => {
   const emptyContactLinks: IContactLink[] = [];
   const [ contactLinks, setContactLinks ] = useState(emptyContactLinks);
+
+  const { websitePages } = useAppContext()
 
   useEffect(() => {
     fetchContactLinks()
