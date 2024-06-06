@@ -1,20 +1,10 @@
 "use client"
-import React, { useEffect, useState } from 'react'
 import Card from './card'
 
-import { fetchContactLinks, IContactLink } from '@/services/fetchService';
+import { useAppContext } from '@/context/appContext';
 
 const Contact = () => {
-  const emptyContactLinks: IContactLink[] = [];
-  const [ contactLinks, setContactLinks ] = useState( emptyContactLinks );
-
-  useEffect(() => {
-    fetchContactLinks()
-      .then(data => {
-          if(data){ setContactLinks(data) }
-        })
-      .catch(error => { console.error(error) });
-  }, []);
+  const { contactLinks } = useAppContext()
 
   return (
     <div>

@@ -1,24 +1,11 @@
 "use client";
 
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react'
 
-import { fetchContactLinks, IContactLink } from '@/services/fetchService';
 import { useAppContext } from '@/context/appContext';
 
 const Footer = () => {
-  const emptyContactLinks: IContactLink[] = [];
-  const [ contactLinks, setContactLinks ] = useState(emptyContactLinks);
-
-  const { websitePages } = useAppContext()
-
-  useEffect(() => {
-    fetchContactLinks()
-      .then(data => {
-          if(data){ setContactLinks(data) }
-        })
-      .catch(error => { console.error(error) });
-  } , []);
+  const { websitePages, contactLinks } = useAppContext()
 
   return (
     <div className='border-t flex flex-col p-5 gap-5 dark:border-gray'>

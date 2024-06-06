@@ -1,20 +1,10 @@
 "use client"
-import React, { useEffect, useState } from 'react'
 
-import { fetchAboutData, IAboutData } from '../../services/fetchService';
 import Link from 'next/link';
+import { useAppContext } from '@/context/appContext';
 
 const AboutPage = () => {
-  const emptyAboutData: IAboutData = { name: '', profileImgUrl: '', titles: [], socials: [], description: [], cta: { message: '', link: '' } };
-  const [ aboutData, setAboutData ] = useState( emptyAboutData );
-
-  useEffect(() => {
-    fetchAboutData()
-      .then(data => {
-          if(data){ setAboutData(data) }
-        })
-      .catch(error => { console.error(error) });
-  }, []);
+  const { aboutData } = useAppContext();
 
   return (
     <div>
