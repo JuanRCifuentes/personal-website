@@ -17,7 +17,6 @@ const Card: React.FC<CardProps> = (props) => {
                     <div className='flex w-20 justify-center my-auto ml-2'>
                         <div className='text-3xl'>{icon}</div>
                     </div>
-                    
                     <div className='flex flex-col p-2'>
                         <div>{name}</div>
                         <div>{contact}</div>

@@ -1,10 +1,24 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import Card from './card'
+
+import { fetchContactLinks, IContactLink } from '@/services/fetchService';
 
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
 import { IoMailOutline } from "react-icons/io5";
 
 const Contact = () => {
+  const emptyContactLinks: IContactLink[] = [];
+  const [ contactLinks, setContactLinks ] = useState( emptyContactLinks );
+
+  useEffect(() => {
+    fetchContactLinks()
+      .then(data => {
+          if(data){ setContactLinks(data) }
+        })
+      .catch(error => { console.error(error) });
+  }, []);
+
   return (
     <div>
       <div className='mb-5'>
@@ -15,35 +29,31 @@ const Contact = () => {
         <div>
           <div className='text-xl my-3 sm:text-center'>Directly</div>
           <div className='flex flex-col gap-4'>
-            <Card 
-              icon={<FaWhatsapp />}
-              name='WhatsApp' 
-              contact='+57 (313) 869-0872'
-              url='https://wa.me/573138690872'
-            />
-            <Card 
-              icon={<IoMailOutline />}
-              name='Email' 
-              contact='info@juanrcifuentes.com'
-              url='mailto:info@juanrcifuentes.com'
-            />
+            {contactLinks.map((contact, index) => (
+              contact.kind === 'directly' && (
+                <Card 
+                  key={index}
+                  icon={contact.icon}
+                  name={contact.name}
+                  contact={contact.url}
+                  url={contact.url}
+                />
+              )))}
           </div>
         </div>
         <div>
           <div className='text-xl my-3 sm:text-center'>Social Media</div>
           <div className='flex flex-col gap-4'>
-            <Card 
-              icon={<FaLinkedin />}
-              name='LinkedIn' 
-              contact='/in/juanrcifuentes/'
-              url='https://www.linkedin.com/in/juanrcifuentes/'
-            />
-            <Card 
-              icon={<FaGithub />}
-              name='Github' 
-              contact='/JuanRCifuentes'
-              url='https://github.com/JuanRCifuentes'
-            />
+            {contactLinks.map((contact, index) => (
+              contact.kind === 'social_media' && (
+                <Card
+                  key={index}
+                  icon={contact.icon}
+                  name={contact.name}
+                  contact={contact.url}
+                  url={contact.url}
+                />
+              )))}
           </div>
         </div>
       </div>
