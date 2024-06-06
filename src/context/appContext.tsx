@@ -5,20 +5,24 @@ import {
     fetchAboutData, 
     IAboutData, 
     fetchContactLinks, 
-    IContactLink 
+    IContactLink, 
+    IProjectData
 } from '@/services/fetchService';
-import { contactLinks } from '@/data/tempData';
 
 interface IAppContext {
     websitePages: { name: string, path: string }[],
     aboutData: IAboutData,
-    contactLinks: IContactLink[]
+    contactLinks: IContactLink[],
+    projectsData: IProjectData[],
+    setProjectsData: React.Dispatch<React.SetStateAction<IProjectData[]>>
 }
 
 const declaration = {
     websitePages: [{ name: '', path: '' }],
     aboutData: { name: '', profileImgUrl: '', titles: [], socials: [], description: [], cta: { message: '', link: '' } },
-    contactLinks: []
+    contactLinks: [],
+    projectsData: [],
+    setProjectsData: () => {}
 }
 
 const AppContext = createContext<IAppContext>(declaration);
@@ -27,6 +31,7 @@ export function AppWrapper( {children}: {children: React.ReactNode} ) {
     const emptyAboutData: IAboutData = { name: '', profileImgUrl: '', titles: [], socials: [], description: [], cta: { message: '', link: '' } };
     const [aboutData, setAboutData] = useState<IAboutData>( emptyAboutData );
     const [contactLinks, setContactLinks] = useState<IContactLink[]>([]);
+    const [projectsData, setProjectsData] = useState<IProjectData[]>([]);
 
     useEffect(() => {
         fetchAboutData()
@@ -47,6 +52,8 @@ export function AppWrapper( {children}: {children: React.ReactNode} ) {
             websitePages: websitePages,
             aboutData: aboutData,
             contactLinks: contactLinks,
+            projectsData: projectsData,
+            setProjectsData: setProjectsData
         }}>
             {children}
         </AppContext.Provider>
