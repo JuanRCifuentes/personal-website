@@ -5,6 +5,7 @@ export interface IContactLink {
     name: string;
     kind: string;
     message: string;
+    urlName: string;
     url: string;
     icon: ReactNode;
 }
@@ -27,13 +28,16 @@ export interface IProjectData {
 }
 
 export async function fetchContactLinks(): Promise<IContactLink[]> {
+    console.log("fetchContactLinks")
     return contactLinks;
 }
 
 export async function fetchAboutData(): Promise<IAboutData> {
+    console.log("fetchAboutLinks")
     return aboutData
 }
 
 export async function fetchProjectsData(): Promise<IProjectData[]> {
+    console.log("fetchProjectsData")
     return projectsData;
 }
