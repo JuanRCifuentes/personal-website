@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 
-import { fetchContactLinks, IContactLink } from '../../../services/fetchService';
+import { fetchContactLinks, IContactLink } from '@/services/fetchService';
+import { websitePages } from '@/utils/pages'
 
 const Footer = () => {
   const emptyContactLinks: IContactLink[] = [];
@@ -21,11 +22,9 @@ const Footer = () => {
     <div className='border-t flex flex-col p-5 gap-5 dark:border-gray dark:text-soft-gray'>
 
       <ul className='flex flex-col sm:hidden justify-center text-center text-xl gap-5 mb-5'>
-        <Link href="/">About</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/resume">Resume</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/contact">Contact</Link>
+        { websitePages.map((page, index) => (
+          <Link href={page.path} key={index}>{page.name}</Link>
+        ))}
       </ul>
 
       <div className="flex justify-center gap-5 text-2xl">

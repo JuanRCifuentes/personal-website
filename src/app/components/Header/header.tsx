@@ -1,19 +1,9 @@
 import { Menu, MenuButton, MenuItems, Transition } from '@headlessui/react'
 import Link from 'next/link'
 
-interface LinkProps {
-    name: string;
-    href: string;
-}
+import { websitePages } from '@/utils/pages'
 
 const Header = () => {
-    const links: LinkProps[] = [
-        { name: 'About', href: '/' },
-        { name: 'Projects', href: '/projects' },
-        { name: 'Resume', href: '/resume' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Contact', href: '/contact' }
-    ]
 
     return (
         <div className= 'sticky top-0 z-40 w-full bg-transparent-white dark:bg-navy dark:text-soft-gray backdrop-blur-xl flex-none border-b border-gray'>
@@ -37,37 +27,26 @@ const Header = () => {
                         leaveTo="opacity-0"
                     >
                         <MenuItems anchor="bottom end" className="flex flex-col z-50 p-3 gap-6 bg-transparent-white backdrop-blur-xl shadow-2xl w-3/4 rounded-lg mt-5">
-                            <HeaderLinks params={{links}}/>
+                            {websitePages.map((websitePage, index) => (
+                                <Link className="hover:text-gold" key={index} href={websitePage.path}>
+                                    {websitePage.name}
+                                </Link>
+                            ))}
                         </MenuItems>
                     </Transition>
                 </Menu>
                 </div>
                 <div className='relative hidden sm:flex items-center ml-auto'>
                     <div className='flex text-sm leading-6 font-semibold space-x-8'>
-                        <HeaderLinks params={{links}}/>
+                        {websitePages.map((websitePage, index) => (
+                            <Link className="hover:text-gold" key={index} href={websitePage.path}>
+                                {websitePage.name}
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
-
-type HeaderLinksProps = {
-    params: {
-        links: Array<LinkProps>
-    }
-}
-
-const HeaderLinks = (props: HeaderLinksProps) => {
-    const { links } = props.params
-    return (
-        <>
-            {links.map((link, index) => (
-                <Link className="hover:text-gold" key={index} href={link.href}>
-                    {link.name}
-                </Link>
-            ))}
-        </>    
     )
 }
 
