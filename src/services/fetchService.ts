@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 export interface IContactLink {
     name: string;
     kind: string;
+    message: string;
     url: string;
     icon: ReactNode;
 }

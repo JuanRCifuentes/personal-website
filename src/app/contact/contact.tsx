@@ -4,9 +4,6 @@ import Card from './card'
 
 import { fetchContactLinks, IContactLink } from '@/services/fetchService';
 
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
-import { IoMailOutline } from "react-icons/io5";
-
 const Contact = () => {
   const emptyContactLinks: IContactLink[] = [];
   const [ contactLinks, setContactLinks ] = useState( emptyContactLinks );
@@ -35,7 +32,7 @@ const Contact = () => {
                   key={index}
                   icon={contact.icon}
                   name={contact.name}
-                  contact={contact.url}
+                  message={contact.message}
                   url={contact.url}
                 />
               )))}
@@ -50,7 +47,7 @@ const Contact = () => {
                   key={index}
                   icon={contact.icon}
                   name={contact.name}
-                  contact={contact.url}
+                  message={contact.message}
                   url={contact.url}
                 />
               )))}

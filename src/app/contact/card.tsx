@@ -3,12 +3,12 @@ import React from 'react'
 interface CardProps {
     icon: React.ReactNode;
     name: string;
-    contact: string;
+    message: string;
     url: string;
 }
 
 const Card: React.FC<CardProps> = (props) => {
-    const { icon, name, contact, url } = props;
+    const { icon, name, message, url } = props;
 
     return (
         <a href={url} target='_blank'>
@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = (props) => {
                     </div>
                     <div className='flex flex-col p-2'>
                         <div>{name}</div>
-                        <div>{contact}</div>
+                        <div>{message}</div>
                     </div>
                 </div>
             </div>
