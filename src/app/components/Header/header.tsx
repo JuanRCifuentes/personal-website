@@ -6,7 +6,7 @@ import { websitePages } from '@/utils/pages'
 const Header = () => {
 
     return (
-        <div className= 'sticky top-0 z-40 w-full bg-transparent-white dark:bg-navy dark:text-soft-gray backdrop-blur-xl flex-none border-b border-gray'>
+        <div className= 'sticky top-0 z-40 w-full bg-transparent-white dark:bg-navy backdrop-blur-xl flex-none border-b border-gray'>
             <div className='flex flex-row mx-4 sm:mx-0 py-4 sm:px-8'>
                 <div className='flex w-fit text-2xl'>
                     Juan R. Cifuentes

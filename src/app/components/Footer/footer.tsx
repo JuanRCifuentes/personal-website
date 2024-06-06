@@ -19,7 +19,7 @@ const Footer = () => {
   } , []);
 
   return (
-    <div className='border-t flex flex-col p-5 gap-5 dark:border-gray dark:text-soft-gray'>
+    <div className='border-t flex flex-col p-5 gap-5 dark:border-gray'>
 
       <ul className='flex flex-col sm:hidden justify-center text-center text-xl gap-5 mb-5'>
         { websitePages.map((page, index) => (
