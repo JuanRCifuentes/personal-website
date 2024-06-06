@@ -1,5 +1,4 @@
 "use client"
-import Card from './card'
 
 import { useAppContext } from '@/context/appContext';
 
