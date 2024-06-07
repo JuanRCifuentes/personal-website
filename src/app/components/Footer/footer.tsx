@@ -1,25 +1,25 @@
+"use client";
+
 import Link from 'next/link';
-import React from 'react'
-import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
-import { IoMailOutline } from "react-icons/io5";
+
+import { useAppContext } from '@/context/appContext';
 
 const Footer = () => {
+  const { websitePages, contactLinks } = useAppContext()
+
   return (
     <div className='border-t flex flex-col p-5 gap-5'>
 
       <ul className='flex flex-col sm:hidden justify-center text-center text-xl gap-5 mb-5'>
-        <Link href="/">About</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/resume">Resume</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/contact">Contact</Link>
+        { websitePages.map((page, index) => (
+          <Link href={page.path} key={index}>{page.name}</Link>
+        ))}
       </ul>
 
       <div className="flex justify-center gap-5 text-2xl">
-        <a href="https://github.com/JuanRCifuentes" target='_blank'><FaGithub /></a>
-        <a href="https://www.linkedin.com/in/juanrcifuentes" target='_blank'><FaLinkedin /></a>
-        <a href='https://wa.me/573138690872' target='_blank'><FaWhatsapp /></a>
-        <a href='mailto:info@juanrcifuentes.com' target='_blank'><IoMailOutline /></a>
+        { contactLinks.map((link, index) => (
+          <a className="" href={link.url} target='_blank' key={index}>{link.icon}</a>
+        ))}
       </div>
 
       <div className="flex justify-center">
