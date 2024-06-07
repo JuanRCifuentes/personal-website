@@ -60,7 +60,7 @@ const MessageForm = () => {
                             </div>
                             <div>
                                 <label className="font-medium">
-                                    Email <a className='text-gray-400'>...so i can get back to you ¯\_(ツ)_/¯</a>
+                                    Email <a className='text-gray-400'>...so I can get back to you ¯\_(ツ)_/¯</a>
                                 </label>
                                 <input
                                     type="email"
@@ -90,7 +90,7 @@ const MessageForm = () => {
                             </div>
                             <div>
                                 <label className="font-medium">
-                                    Message <a className='text-gray-400'>...i know you want to ~(˘▾˘~)</a>
+                                    Message <a className='text-gray-400'>...I know you want to ~(˘▾˘~)</a>
                                 </label>
                                 <textarea name='message' required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"></textarea>
                             </div>
