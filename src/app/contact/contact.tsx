@@ -109,7 +109,7 @@ const Contact = () => {
                         <div className="max-w-lg flex-1 mt-12">
                             <form
                                 onSubmit={onSubmit}
-                                className="space-y-5"
+                                className="space-y-3"
                             >
                                 <div>
                                     <label className="font-medium">
@@ -118,7 +118,6 @@ const Contact = () => {
                                     <input
                                         type="text"
                                         name="name"
-                                        required
                                         className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                                     />
                                 </div>
@@ -129,7 +128,6 @@ const Contact = () => {
                                     <input
                                         type="email"
                                         name='email'
-                                        required
                                         className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"
                                     />
                                 </div>
@@ -139,7 +137,7 @@ const Contact = () => {
                                     </label>
                                     <input
                                         type="text"
-                                        required
+                                        name='company'
                                         className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"
                                     />
                                 </div>
@@ -149,14 +147,32 @@ const Contact = () => {
                                     </label>
                                     <textarea name='message' required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"></textarea>
                                 </div>
-                                <button
-                                    type="submit"
-                                    className="w-full px-4 py-2 text-white font-medium bg-blue-900 rounded-lg duration-150"
+                                <div className={`
+                                    gap-5
+                                    rounded-lg
+                                    ${result === "" ? 'hidden' : 'block'}
+                                    ${result === "Form Submitted Successfully" ? 'border-gray-400 border-2' : result === "Sending...." ? 'border-gray-400 border-2' : 'bg-red-100'}
+                                    flex justify-left
+                                    text-sm
+                                    text-gray-400
+                                    px-4 
+                                    py-2`}
                                 >
-                                    Submit
+                                    <svg className={`${ result === "Sending...." ? 'block animate-spin' : 'hidden'} text-2xl`} stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M512 1024c-69.1 0-136.2-13.5-199.3-40.2C251.7 958 197 921 150 874c-47-47-84-101.7-109.8-162.7C13.5 648.2 0 581.1 0 512c0-19.9 16.1-36 36-36s36 16.1 36 36c0 59.4 11.6 117 34.6 171.3 22.2 52.4 53.9 99.5 94.3 139.9 40.4 40.4 87.5 72.2 139.9 94.3C395 940.4 452.6 952 512 952c59.4 0 117-11.6 171.3-34.6 52.4-22.2 99.5-53.9 139.9-94.3 40.4-40.4 72.2-87.5 94.3-139.9C940.4 629 952 571.4 952 512c0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9 437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.2C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3s-13.5 136.2-40.2 199.3C958 772.3 921 827 874 874c-47 47-101.8 83.9-162.7 109.7-63.1 26.8-130.2 40.3-199.3 40.3z"></path></svg>
+                                    <svg className={`${ result === "Form Submitted Successfully" ? 'block' : 'hidden'} text-2xl`} stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M11 7h2v2h-2V7zm0 4h2v6h-2v-6zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+                                    <div>{result}</div>
+                                </div>
+                                <button
+                                    disabled={result === "" ? false : true}
+                                    type="submit"
+                                    className={`${result === '' ? '' : 'bg-blue-300'} w-full px-4 py-2 text-white font-medium bg-blue-900 rounded-lg duration-150`}
+                                >
+                                    <p className='flex justify-center content-center gap-5'>
+                                        Submit
+                                    </p>
+                                    
                                 </button>
                             </form>
-                            <span>{result}</span>
                         </div>
                     </div>
                 </div>
