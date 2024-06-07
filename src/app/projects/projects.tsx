@@ -16,7 +16,7 @@ const Projects = () => {
   } , [])
 
   return (
-    <>
+    <div className='p-5'>
       {projectsData.map((project, index) => (
         <div className='flex flex-col m-5 gap-2' key={index}>
           <div className='text-3xl'>{project.title}</div>
@@ -31,7 +31,7 @@ const Projects = () => {
           <div>{project.text}</div>
         </div>
       ))}
-    </>
+    </div>
   )
 }
 

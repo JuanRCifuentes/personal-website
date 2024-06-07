@@ -7,7 +7,7 @@ const AboutPage = () => {
   const { aboutData } = useAppContext();
 
   return (
-    <div>
+    <div className='p-10'>
       <div className='flex flex-col-reverse sm:flex-row mb-3'>
         <div className='my-auto flex flex-col w-full'>
           <div className='text-3xl mb-5 sm:mb-2 font-semibold'>
@@ -28,7 +28,7 @@ const AboutPage = () => {
           </div>
         </div>
         <div className='min-w-72 w-full mb-7 sm:my-2'>
-          <div className='mx-auto h-44 min-w-44 w-44 rounded-full'></div>
+          <div className='mx-auto h-44 min-w-44 w-44 rounded-full bg-blue-900'></div>
         </div>
       </div>
       <div className='flex flex-col py-3 text-xl gap-3'>
