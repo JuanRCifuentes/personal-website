@@ -8,11 +8,14 @@ const Projects = () => {
   const { projectsData, setProjectsData } = useAppContext()
 
   useEffect(() => {
-    fetchProjectsData()
-      .then(data => {
-        setProjectsData(data)
-      })
-      .catch(error => { console.error(error) });
+    if (!projectsData.length)
+    {
+      fetchProjectsData()
+        .then(data => {
+          setProjectsData(data)
+        })
+        .catch(error => { console.error(error) });
+    }
   } , [])
 
   return (
