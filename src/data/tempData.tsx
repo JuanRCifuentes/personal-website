@@ -39,7 +39,7 @@ export const projectsData = [
         description: "Front-end app with firebase backend to manage and visualize data for a small business",
         tags: ["React", "GCP"],
         img: "",
-        link: "",
+        link: "https://www.venkra.com",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, magna et facilisis viverra, urna ante convallis ipsum, vitae condimentum enim eros vel velit. Praesent sed arcu eget orci consectetur tempus. Cras bibendum iaculis elementum. Maecenas ullamcorper posuere euismod. Sed laoreet lacinia libero. Vestibulum scelerisque lorem at lectus dignissim, sed auctor mauris laoreet. Cras a."
     },
     {
@@ -71,7 +71,7 @@ export const projectsData = [
         description: "A personal front-end website to showcase my projects and skills",
         tags: ["React", "Firebase"],
         img: "",
-        link: "",
+        link: "https://old.juanrcifuentes.com",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, magna et facilisis viverra, urna ante convallis ipsum, vitae condimentum enim eros vel velit. Praesent sed arcu eget orci consectetur tempus. Cras bibendum iaculis elementum. Maecenas ullamcorper posuere euismod. Sed laoreet lacinia libero. Vestibulum scelerisque lorem at lectus dignissim, sed auctor mauris laoreet. Cras a."
     },
 ]

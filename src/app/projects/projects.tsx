@@ -31,6 +31,7 @@ const Projects = () => {
               </div>
             ))}
           </div>
+          {project.link && <a href={project.link} className='text-blue-500'>{project.link}</a>}
           <div>{project.text}</div>
         </div>
       ))}
