@@ -26,7 +26,7 @@ const MessageForm = () => {
         setSubmissionResult(data.message);
       }
     };
-    
+
   return (
     <main className="max-w-screen-xl mx-auto px-4 text-gray-600 gap-12 sm:px-8 lg:flex">
         <div className="sm:mt-14 md:mt-3">
@@ -39,7 +39,7 @@ const MessageForm = () => {
                         You can also send me a message directly using the form below. I&apos;ll get back to you as soon as possible.
                     </p>
                     <p>
-                        Every field is optional, but if you want me to get back to you, please provide an email address.
+                        <text className='text-blue-900 text-xl font-bold'>Every field is optional</text> (except the message one), but if you want me to get back to you, please provide an email address.
                     </p>
                 </div>
                 <div className='flex justify-center basis-2/3'>
@@ -50,7 +50,7 @@ const MessageForm = () => {
                         >
                             <div>
                                 <label className="font-medium">
-                                    Full name <a className='text-gray-400'>...or a nickname :D</a>
+                                    Full name <a className='text-gray-400'>...or a nickname &#x28;&#xac;&#x5f;&#xac;&#x29;</a>
                                 </label>
                                 <input
                                     type="text"
@@ -60,7 +60,7 @@ const MessageForm = () => {
                             </div>
                             <div>
                                 <label className="font-medium">
-                                    Email <a className='text-gray-400'>...so i can get back to you</a>
+                                    Email <a className='text-gray-400'>...so I can get back to you &#xaf;&#x5c;&#x5f;&#x28;&#x30c4;&#x29;&#x5f;&#x2f;&#xaf;</a>
                                 </label>
                                 <input
                                     type="email"
@@ -70,7 +70,7 @@ const MessageForm = () => {
                             </div>
                             <div>
                                 <label className="font-medium">
-                                    Company <a className='text-gray-400'>...if you dare!</a>
+                                    Company <a className='text-gray-400'>...if you dare! &#x295;&#x2022;&#x1d25;&#x2022;&#x294;</a>
                                 </label>
                                 <input
                                     type="text"
@@ -80,7 +80,17 @@ const MessageForm = () => {
                             </div>
                             <div>
                                 <label className="font-medium">
-                                    Message <a className='text-gray-400'>...if not, why would you come here?</a>
+                                    Feedback <a className='text-gray-400'>... &#x28;&#xe07;&#x27;&#x300;&#x2d;&#x27;&#x301;&#x29;&#xe07;</a>
+                                </label>
+                                <input
+                                    type="text"
+                                    name='feedback'
+                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"
+                                />
+                            </div>
+                            <div>
+                                <label className="font-medium">
+                                    Message <a className='text-gray-400'>...I know you want to &#x7e;&#x28;&#x2d8;&#x25be;&#x2d8;&#x7e;&#x29;</a>
                                 </label>
                                 <textarea name='message' required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"></textarea>
                             </div>
