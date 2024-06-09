@@ -8,8 +8,8 @@ const Contact = () => {
   const { contactLinks } = useAppContext()
 
   return (
-    <section className="py-10">
-        <div className="max-w-screen-xl mx-auto px-4 text-gray-600 gap-12 sm:px-8 lg:flex">
+    <section>
+        <div className="gap-12 lg:flex">
             <div className="max-w-md">
                 <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
                     Let’s connect

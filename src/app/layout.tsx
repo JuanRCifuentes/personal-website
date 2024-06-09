@@ -3,6 +3,7 @@ import { Roboto_Flex } from 'next/font/google'
 import './globals.css';
 
 import { AppWrapper } from '@/context/appContext';
+import PageContainer from './components/containers/pageContainer'
 import Footer from './components/Footer';
 import Header from './components/Header';
 
@@ -18,7 +19,9 @@ export default function RootLayout( {children}: {children: React.ReactNode} ) {
       <body>
         <AppWrapper>
           <Header />
+          <PageContainer>
             {children}
+          </PageContainer>
           <Footer />
         </AppWrapper>
       </body>

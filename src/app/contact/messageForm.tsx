@@ -28,7 +28,7 @@ const MessageForm = () => {
     };
 
   return (
-    <main className="max-w-screen-xl mx-auto px-4 text-gray-600 gap-12 sm:px-8 lg:flex">
+    <main>
         <div className="sm:mt-14 md:mt-3">
             <div className="mx-auto gap-16 lg:flex lg:max-w-none">
                 <div className="max-w-lg basis-1/3 space-y-3">
