@@ -7,7 +7,7 @@ const AboutPage = () => {
   const { aboutData } = useAppContext();
 
   return (
-    <div className='p-10'>
+    <div>
       <div className='flex flex-col-reverse sm:flex-row mb-3'>
         <div className='my-auto flex flex-col w-full'>
           <div className='text-3xl mb-5 sm:mb-2 font-semibold'>

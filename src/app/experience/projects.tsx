@@ -19,9 +19,9 @@ const Projects = () => {
   } , [])
 
   return (
-    <div className='p-5'>
+    <div>
       {projectsData.map((project, index) => (
-        <div className='flex flex-col m-5 gap-2' key={index}>
+        <div className='flex flex-col gap-2' key={index}>
           <div className='text-3xl'>{project.title}</div>
           <div className='text-xl'>{project.description}</div>
           <div className='flex gap-2 justify-center sm:justify-start'>
