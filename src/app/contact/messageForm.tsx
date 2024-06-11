@@ -39,7 +39,7 @@ const MessageForm = () => {
                         You can also send me a message directly using the form below. I&apos;ll get back to you as soon as possible.
                     </p>
                     <p>
-                        <text className='text-blue-900 text-xl font-bold'>Every field is optional</text> (except the message one), but if you want me to get back to you, please provide an email address.
+                        <span className='text-blue-900 text-xl font-bold'>Every field is optional</span> (except the message one), but if you want me to get back to you, please provide an email address.
                     </p>
                 </div>
                 <div className='flex justify-center basis-2/3'>
