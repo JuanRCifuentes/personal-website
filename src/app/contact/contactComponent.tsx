@@ -62,19 +62,21 @@ const LinkCard = (props: { item: IContactLink }) => {
                     : item.name
                 }
             </h4>
-            <a 
-                href={item.url}
-                className="text-sm text-blue-900 font-medium inline-flex items-center
-                hover:bg-blue-200 duration-150"
-            >
-                {item.urlName==='' ? 
-                    <div className="animate-pulse bg-gray-200 h-3 w-1/2 mb-2 rounded-full"></div>
-                    : item.urlName
-                // <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-1 duration-150 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                //     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                // </svg>
+            {item.urlName==='' ? 
+                <div className="animate-pulse bg-gray-200 h-4 w-3/4 mb-2 rounded-full"></div>
+                :<>
+                    <a 
+                        href={item.url}
+                        className="group text-sm text-blue-900 font-medium inline-flex items-center
+                        hover:bg-blue-200 duration-150 max-w-fit pl-1 pr-2 rounded-full"
+                    >
+                        {item.urlName}
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-1 duration-150 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                </>
                 }
-            </a>
         </div>
     )
 }
