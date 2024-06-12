@@ -42,7 +42,7 @@ const AboutPage = () => {
       <div className='flex flex-col py-3 text-xl gap-3'>
         {aboutData.description.map((descriptionPart, index) => 
           descriptionPart==='' ?
-            <div className='flex flex-col mb-5 gap-3'>
+            <div key={index} className='flex flex-col mb-5 gap-3'>
               <div className="animate-pulse bg-gray-200 h-5 w-full rounded-full"></div>
               <div className="animate-pulse bg-gray-200 h-5 w-3/4 rounded-full"></div>
             </div>
