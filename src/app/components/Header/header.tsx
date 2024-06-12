@@ -27,7 +27,7 @@ const Header = () => {
                         Juan R. Cifuentes
                     </a>
                     <div className="sm:hidden">
-                        <button className="text-gray-500 hover:text-gray-800"
+                        <button className="text-gray-500 hover:text-gray-800" aria-label="Menu button"
                             onClick={() => setIsNavBarOpen(!isNavBarOpen)}
                         >
                             {
