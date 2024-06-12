@@ -52,7 +52,7 @@ const LinkCard = (props: { item: IContactLink }) => {
         <div className='flex flex-col justify-between my-2 w-full sm:max-w-full'>
             <div className="w-12 h-12 rounded-full border flex items-center justify-center text-gray-700 text-2xl mb-1">
                 {item.icon==='' ? 
-                    <svg className="animate-pulse text-gray-200" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>
+                    <svg className="animate-pulse text-gray-200" stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>
                     : item.icon
                 }
             </div>
@@ -68,7 +68,7 @@ const LinkCard = (props: { item: IContactLink }) => {
                     <a 
                         href={item.url}
                         className="group text-sm text-blue-900 font-medium inline-flex items-center
-                        hover:bg-blue-200 duration-150 max-w-fit pl-1 pr-2 rounded-full"
+                        hover:bg-blue-200 duration-150 max-w-fit pl-2 pr-2 rounded-full"
                     >
                         {item.urlName}
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-1 duration-150 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

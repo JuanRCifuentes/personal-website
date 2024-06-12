@@ -28,7 +28,7 @@ const AboutPage = ( props: { aboutData:IAboutData }) => {
           <div className='flex flex-row gap-5 text-2xl justify-center sm:justify-start'>
             {aboutData.socials.map((social, index) => (
               social.url==='' ? 
-              <svg key={index} className="animate-pulse text-gray-200" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>
+              <svg key={index} className="animate-pulse text-gray-200" stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z"></path></svg>
                 : <a href={social.url} target='_blank' key={index}>{social.icon}</a>
             ))}
           </div>

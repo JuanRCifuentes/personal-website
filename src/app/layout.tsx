@@ -19,6 +19,7 @@ export default function RootLayout( {children}: {children: React.ReactNode} ) {
       <body>
         <AppWrapper>
           <Header />
+          <div className='flex h-14'/>
           <PageContainer>
             {children}
           </PageContainer>
