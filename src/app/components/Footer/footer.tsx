@@ -8,7 +8,7 @@ const Footer = () => {
   const { websitePages, contactLinks } = useAppContext()
 
   return (
-    <div className='border-t flex flex-col p-5 gap-5'>
+    <div className='border-t flex flex-col p-5 gap-5 bg-white'>
 
       <menu className='flex flex-col sm:hidden justify-center text-center text-xl gap-5 mb-5'>
         { websitePages.map((page, index) => (
