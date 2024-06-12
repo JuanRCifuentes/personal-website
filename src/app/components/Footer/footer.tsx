@@ -22,7 +22,7 @@ const Footer = () => {
 
       <ul className="flex justify-center gap-5 text-2xl">
         { contactLinks.map((link, index) => (
-          <a className="" href={link.url} target='_blank' key={index}>
+          <a aria-label={`Redirect to my ${link.name} page`} href={link.url} target='_blank' key={index}>
             <li>
               {link.icon}
             </li>

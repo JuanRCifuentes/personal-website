@@ -51,48 +51,48 @@ const MessageForm = () => {
                             <div>
                                 <label className="font-medium">
                                     Full name <span className='text-gray-500'>...or a nickname &#x28;&#xac;&#x5f;&#xac;&#x29;</span>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"
+                                    />
                                 </label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"
-                                />
                             </div>
                             <div>
                                 <label className="font-medium">
                                     Email <span className='text-gray-500'>...so I can get back to you &#xaf;&#x5c;&#x5f;&#x28;&#x30c4;&#x29;&#x5f;&#x2f;&#xaf;</span>
+                                    <input
+                                        type="email"
+                                        name='email'
+                                        className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"
+                                    />
                                 </label>
-                                <input
-                                    type="email"
-                                    name='email'
-                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"
-                                />
                             </div>
                             <div>
                                 <label className="font-medium">
                                     Company <span className='text-gray-500'>...if you dare! &#x295;&#x2022;&#x1d25;&#x2022;&#x294;</span>
+                                    <input
+                                        type="text"
+                                        name='company'
+                                        className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"
+                                    />
                                 </label>
-                                <input
-                                    type="text"
-                                    name='company'
-                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"
-                                />
                             </div>
                             <div>
                                 <label className="font-medium">
                                     Feedback <span className='text-gray-500'>... &#x28;&#xe07;&#x27;&#x300;&#x2d;&#x27;&#x301;&#x29;&#xe07;</span>
+                                    <input
+                                        type="text"
+                                        name='feedback'
+                                        className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"
+                                    />
                                 </label>
-                                <input
-                                    type="text"
-                                    name='feedback'
-                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"
-                                />
                             </div>
                             <div>
                                 <label className="font-medium">
                                     Message <span className='text-gray-500'>...I know you want to &#x7e;&#x28;&#x2d8;&#x25be;&#x2d8;&#x7e;&#x29;</span>
+                                    <textarea name='message' required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"></textarea>
                                 </label>
-                                <textarea name='message' required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"></textarea>
                             </div>
                             <div className={`gap-5 rounded-lg items-center justify-left text-sm text-gray-500 px-4 py-2
                                 ${submissionResult === "" ? 'hidden' : 'flex'}
