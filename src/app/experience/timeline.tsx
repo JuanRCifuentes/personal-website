@@ -34,10 +34,10 @@ const Timeline = () => {
     }, [selectedKind])
 
     return (
-        <div className='flex flex-col relative container mx-auto px-6 gap-5'>
+        <ul className='flex flex-col relative container mx-auto px-6 gap-5'>
             <div className='absolute z-0 w-2 h-full bg-white shadow-md left-[4.25rem] inset-0 md:mx-auto md:right-0 md:left-0'></div>
             {projectsList.map((experience, idx) => (
-                <div key={idx} className='relative z-10'>
+                <li key={idx} className='relative z-10'>
                     <img 
                         src={experience.img}
                         alt=''
@@ -58,9 +58,9 @@ const Timeline = () => {
                             {experience.text}  
                         </div>
                     </div>
-                </div>
+                </li>
             ))}
-        </div>
+        </ul>
     )
 }
 
