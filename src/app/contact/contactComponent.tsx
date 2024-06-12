@@ -68,7 +68,7 @@ const LinkCard = (props: { item: IContactLink }) => {
                     <a 
                         href={item.url}
                         className="group text-sm text-blue-900 font-medium inline-flex items-center
-                        hover:bg-blue-200 duration-150 max-w-fit pl-1 pr-2 rounded-full"
+                        hover:bg-blue-200 duration-150 max-w-fit pl-2 pr-2 rounded-full"
                     >
                         {item.urlName}
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-1 duration-150 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
