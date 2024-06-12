@@ -2,15 +2,27 @@
 
 import { useAppContext } from '@/context/appContext'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const Header = () => {
     const { websitePages } = useAppContext()
 
-    const [isNavBarOpen, setIsNavBarOpen] = useState(false)
+    const [ isNavBarOpen, setIsNavBarOpen ] = useState(false)
+
+    useEffect(() => {
+        console.log('overflow hidden')
+        if (isNavBarOpen) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = 'auto';
+        }
+        return () => {
+          document.body.style.overflow = 'auto';
+        };
+      }, [isNavBarOpen]); 
 
     return (
-        <nav className="sticky top-0 bg-white bg-opacity-50 backdrop-blur-md border-b w-full sm:text-sm">
+        <nav className={`fixed top-0 bg-white bg-opacity-50 backdrop-blur-md border-b w-full sm:text-sm${isNavBarOpen ? 'bg-white bg-opacity-50 backdrop-blur-md h-dvh' : ''}`}>
             <div className="items-center px-4 max-w-screen-xl mx-auto sm:flex sm:px-8">
                 <div className="flex items-center justify-between py-3 sm:py-5 sm:block">
                     <a className='text-2xl' href="/">
@@ -34,28 +46,28 @@ const Header = () => {
                         </button>
                     </div>
                 </div>
-                <div className={`flex-1 mt-20 sm:block sm:pb-0 sm:mt-0 ${isNavBarOpen ? 'bg-white mx-5 p-6 bg-opacity-50 backdrop-blur-md w-1/2 fixed top-0 right-0 block rounded-2xl' : 'hidden'}`}>
-                    <ul className="justify-end items-center space-y-6 sm:flex sm:space-x-6 sm:space-y-0">
-                        {
-                            websitePages.map((item, idx) => {
-                                return (
-                                    <li key={idx} className="text-gray-700 hover:text-blue-900 font-semibold">
-                                        <Link href={item.path} className="block">
+                <div className={`flex-1 mt-14 sm:block sm:pb-0 sm:mt-0 ${isNavBarOpen ? 'p-2 w-full fixed h-dvh left-0 top-0 block rounded-2xl' : 'hidden'}`}>
+                    <menu className="flex flex-col sm:items-center space-y-2 sm:flex-row sm:justify-end sm:space-x-3 sm:space-y-0">
+                        {websitePages.map((item, idx) => {
+                            return (
+                                <Link href={item.path} className='' onClick={() => setIsNavBarOpen(false)}>
+                                    <li key={idx} className="text-gray-700 p-3 sm:py-1 sm:px-2 hover:bg-transparent border border-transparent hover:border-blue-900 active:bg-blue-900 active:text-gray-200 rounded-2xl font-semibold">
+                                        <div className="block">
                                             {item.name}
-                                        </Link>
+                                        </div>
                                     </li>
-                                )
-                            })
-                        }
+                                </Link>
+                            )
+                        })}
                         <span className='hidden w-px h-6 bg-gray-300 sm:block'></span>
                         <div className='space-y-3 items-center gap-x-6 sm:flex sm:space-y-0'>
-                            <li className='flex justify-center'>
-                                <div className="block p-1.5 text-lg text-center text-white bg-blue-900 hover:bg-white hover:text-blue-900 border-2 border-transparent hover:border-blue-900 rounded-full shadow w-min">
+                            <div className='flex justify-center'>
+                                <li className="block p-1.5 mx-3 mb-2 sm:mb-0 text-lg text-center text-white bg-blue-900 hover:bg-white hover:text-blue-900 border-2 border-transparent hover:border-blue-900 rounded-full shadow w-min">
                                     <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.173 14.83a4 4 0 1 1 5.657 -5.657"></path><path d="M11.294 12.707l.174 .247a7.5 7.5 0 0 0 8.845 2.492a9 9 0 0 1 -14.671 2.914"></path><path d="M3 12h1"></path><path d="M12 3v1"></path><path d="M5.6 5.6l.7 .7"></path><path d="M3 21l18 -18"></path></svg>
-                                </div>
-                            </li>
+                                </li>
+                            </div>
                         </div>
-                    </ul>
+                    </menu>
                 </div>
             </div>
         </nav>
