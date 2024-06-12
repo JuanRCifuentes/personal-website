@@ -8,9 +8,9 @@ const AboutPage = () => {
 
   return (
     <div>
-      <div className='flex flex-col-reverse sm:flex-row mb-3'>
+      <div className='flex flex-col-reverse md:flex-row mb-3'>
         <div className='my-auto flex flex-col w-full'>
-          <div className='text-3xl mb-5 sm:mb-2 font-semibold'>
+          <div className='text-3xl text-gray-800 md:text-4xl mb-5 sm:mb-2 font-semibold'>
             {aboutData.name}
           </div>
           <div className='flex flex-col sm:flex-row text-xl mb-5 sm:mb-3 font-semibold'>
@@ -34,9 +34,16 @@ const AboutPage = () => {
       <div className='flex flex-col py-3 text-xl gap-3'>
         {aboutData.description.map((descriptionPart, index) => <div key={index}>{descriptionPart}</div>)}
       </div>
-      <div className='text-xl'>
-        <Link href={aboutData.cta.link}>{aboutData.cta.message}</Link>
-      </div>
+      <Link 
+          href={aboutData.cta.link}
+          className="text-xl group px-4 py-2 text-blue-900 font-medium bg-blue-50 rounded-full inline-flex items-center
+          hover:bg-blue-200 duration-150"
+      >
+        {aboutData.cta.message}
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 ml-1 duration-150 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </Link>
     </div>
   )
 }
