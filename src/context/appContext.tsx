@@ -28,9 +28,15 @@ const declaration = {
 const AppContext = createContext<IAppContext>(declaration);
 
 export function AppWrapper( {children}: {children: React.ReactNode} ) {
-    const emptyAboutData: IAboutData = { name: '', profileImgUrl: '', titles: [], socials: [], description: [], cta: { message: '', link: '' } };
+    const emptySocial = { name: '', kind: 'social_media', message: '', urlName: '', url: '', icon: '' };
+    const emptyAboutData: IAboutData = { name: '', profileImgUrl: '', titles: ['',''], socials: [emptySocial, emptySocial, emptySocial, emptySocial], description: ['',''], cta: { message: 'Send me a message', link: '' } };
     const [aboutData, setAboutData] = useState<IAboutData>( emptyAboutData );
-    const [contactLinks, setContactLinks] = useState<IContactLink[]>([]);
+    const [contactLinks, setContactLinks] = useState<IContactLink[]>([
+        { name: '', kind: 'social_media', message: '', urlName: '', url: '', icon: '' },
+        { name: '', kind: 'social_media', message: '', urlName: '', url: '', icon: '' },
+        { name: '', kind: 'directly', message: '', urlName: '', url: '', icon: '' },
+        { name: '', kind: 'directly', message: '', urlName: '', url: '', icon: '' },
+    ]);
     const [projectsData, setProjectsData] = useState<IProjectData[]>([]);
 
     useEffect(() => {
