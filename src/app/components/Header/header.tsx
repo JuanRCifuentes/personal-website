@@ -48,13 +48,15 @@ const Header = () => {
                     <menu className="flex flex-col sm:items-center space-y-2 sm:flex-row sm:justify-end sm:space-x-3 sm:space-y-0">
                         {websitePages.map((item, idx) => {
                             return (
-                                <Link key={idx} href={item.path} className='' onClick={() => setIsNavBarOpen(false)}>
-                                    <li className="text-gray-700 p-3 sm:py-1 sm:px-2 hover:bg-transparent border border-transparent hover:border-blue-900 active:bg-blue-900 active:text-gray-200 rounded-2xl font-semibold">
-                                        <div className="block">
-                                            {item.name}
+                                <li key={idx}>
+                                    <Link key={idx} href={item.path} className='' onClick={() => setIsNavBarOpen(false)}>
+                                        <div className="text-gray-700 p-3 sm:py-1 sm:px-2 hover:bg-transparent border border-transparent hover:border-blue-900 active:bg-blue-900 active:text-gray-200 rounded-2xl font-semibold">
+                                            <div className="block">
+                                                {item.name}
+                                            </div>
                                         </div>
-                                    </li>
-                                </Link>
+                                    </Link>
+                                </li>
                             )
                         })}
                         <span className='hidden w-px h-6 bg-gray-300 sm:block'></span>

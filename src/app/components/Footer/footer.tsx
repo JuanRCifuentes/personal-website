@@ -12,8 +12,8 @@ const Footer = () => {
 
       <menu className='flex flex-col sm:hidden justify-center text-center text-xl gap-5 mb-5'>
         { websitePages.map((page, index) => (
-          <li>
-            <Link href={page.path} key={index}>
+          <li key={index}>
+            <Link href={page.path}>
                 {page.name}
             </Link>
           </li>
@@ -22,8 +22,8 @@ const Footer = () => {
 
       <ul className="flex justify-center gap-5 text-2xl">
         { contactLinks.map((link, index) => (
-          <li>
-            <a aria-label={`Redirect to my ${link.name} page`} href={link.url} target='_blank' key={index}>
+          <li key={index}>
+            <a aria-label={`Redirect to my ${link.name} page`} href={link.url} target='_blank'>
                 {link.icon}
             </a>
           </li>
