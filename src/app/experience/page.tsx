@@ -1,3 +1,3 @@
-import Projects from './projects';
+import Experience from './experience';
 
-export default Projects;
+export default Experience;

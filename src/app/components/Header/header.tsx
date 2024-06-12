@@ -20,7 +20,7 @@ const Header = () => {
       }, [isNavBarOpen]); 
 
     return (
-        <nav className={`fixed top-0 bg-white bg-opacity-50 backdrop-blur-md border-b w-full sm:text-sm${isNavBarOpen ? 'bg-white bg-opacity-50 backdrop-blur-md h-lvh' : ''}`}>
+        <nav className={`fixed z-50 top-0 bg-white bg-opacity-50 backdrop-blur-md border-b w-full sm:text-sm${isNavBarOpen ? 'bg-white bg-opacity-50 backdrop-blur-md h-lvh' : ''}`}>
             <div className="items-center px-4 max-w-screen-xl mx-auto sm:flex sm:px-8">
                 <div className="flex items-center justify-between py-3 sm:py-5 sm:block">
                     <a className='text-2xl' href="/">

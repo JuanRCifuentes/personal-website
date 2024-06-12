@@ -20,6 +20,7 @@ export interface IAboutData {
 
 export interface IProjectData {
     title: string;
+    kind: string;
     description: string;
     tags: string[];
     img: string;
