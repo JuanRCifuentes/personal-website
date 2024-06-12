@@ -42,7 +42,7 @@ const MessageForm = () => {
                         <span className='text-blue-900 text-xl font-bold'>Every field is optional</span> (except the message one), but if you want me to get back to you, please provide an email address.
                     </p>
                 </div>
-                <div className='flex justify-center basis-2/3'>
+                <div className='text-gray-800 flex justify-center basis-2/3'>
                     <div className="sm:max-w-lg lg:max-w-full mt-12">
                         <form
                             onSubmit={onSubmit}
@@ -50,17 +50,17 @@ const MessageForm = () => {
                         >
                             <div>
                                 <label className="font-medium">
-                                    Full name <a className='text-gray-400'>...or a nickname &#x28;&#xac;&#x5f;&#xac;&#x29;</a>
+                                    Full name <span className='text-gray-500'>...or a nickname &#x28;&#xac;&#x5f;&#xac;&#x29;</span>
                                 </label>
                                 <input
                                     type="text"
                                     name="name"
-                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                                    className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-blue-600 shadow-sm rounded-lg"
                                 />
                             </div>
                             <div>
                                 <label className="font-medium">
-                                    Email <a className='text-gray-400'>...so I can get back to you &#xaf;&#x5c;&#x5f;&#x28;&#x30c4;&#x29;&#x5f;&#x2f;&#xaf;</a>
+                                    Email <span className='text-gray-500'>...so I can get back to you &#xaf;&#x5c;&#x5f;&#x28;&#x30c4;&#x29;&#x5f;&#x2f;&#xaf;</span>
                                 </label>
                                 <input
                                     type="email"
@@ -70,7 +70,7 @@ const MessageForm = () => {
                             </div>
                             <div>
                                 <label className="font-medium">
-                                    Company <a className='text-gray-400'>...if you dare! &#x295;&#x2022;&#x1d25;&#x2022;&#x294;</a>
+                                    Company <span className='text-gray-500'>...if you dare! &#x295;&#x2022;&#x1d25;&#x2022;&#x294;</span>
                                 </label>
                                 <input
                                     type="text"
@@ -80,7 +80,7 @@ const MessageForm = () => {
                             </div>
                             <div>
                                 <label className="font-medium">
-                                    Feedback <a className='text-gray-400'>... &#x28;&#xe07;&#x27;&#x300;&#x2d;&#x27;&#x301;&#x29;&#xe07;</a>
+                                    Feedback <span className='text-gray-500'>... &#x28;&#xe07;&#x27;&#x300;&#x2d;&#x27;&#x301;&#x29;&#xe07;</span>
                                 </label>
                                 <input
                                     type="text"
@@ -90,13 +90,13 @@ const MessageForm = () => {
                             </div>
                             <div>
                                 <label className="font-medium">
-                                    Message <a className='text-gray-400'>...I know you want to &#x7e;&#x28;&#x2d8;&#x25be;&#x2d8;&#x7e;&#x29;</a>
+                                    Message <span className='text-gray-500'>...I know you want to &#x7e;&#x28;&#x2d8;&#x25be;&#x2d8;&#x7e;&#x29;</span>
                                 </label>
                                 <textarea name='message' required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-blue-900 shadow-sm rounded-lg"></textarea>
                             </div>
-                            <div className={`gap-5 rounded-lg items-center justify-left text-sm text-gray-400 px-4 py-2
+                            <div className={`gap-5 rounded-lg items-center justify-left text-sm text-gray-500 px-4 py-2
                                 ${submissionResult === "" ? 'hidden' : 'flex'}
-                                ${submissionResult === "Form Submitted Successfully" ? 'border-gray-400 border-2' : submissionResult === "Sending...." ? 'border-gray-400 border-2' : 'bg-red-100'}`
+                                ${submissionResult === "Form Submitted Successfully" ? 'border-gray-500 border-2' : submissionResult === "Sending...." ? 'border-gray-500 border-2' : 'bg-red-100'}`
                             }
                             >
                                 <svg className={`${ submissionResult === "Sending...." ? 'animate-spin' : 'hidden'} text-xl`} stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"> <path d="M512 1024c-69.1 0-136.2-13.5-199.3-40.2C251.7 958 197 921 150 874c-47-47-84-101.7-109.8-162.7C13.5 648.2 0 581.1 0 512c0-19.9 16.1-36 36-36s36 16.1 36 36c0 59.4 11.6 117 34.6 171.3 22.2 52.4 53.9 99.5 94.3 139.9 40.4 40.4 87.5 72.2 139.9 94.3C395 940.4 452.6 952 512 952c59.4 0 117-11.6 171.3-34.6 52.4-22.2 99.5-53.9 139.9-94.3 40.4-40.4 72.2-87.5 94.3-139.9C940.4 629 952 571.4 952 512c0-59.4-11.6-117-34.6-171.3a440.45 440.45 0 0 0-94.3-139.9 437.71 437.71 0 0 0-139.9-94.3C629 83.6 571.4 72 512 72c-19.9 0-36-16.1-36-36s16.1-36 36-36c69.1 0 136.2 13.5 199.3 40.2C772.3 66 827 103 874 150c47 47 83.9 101.8 109.7 162.7 26.7 63.1 40.2 130.2 40.2 199.3s-13.5 136.2-40.2 199.3C958 772.3 921 827 874 874c-47 47-101.8 83.9-162.7 109.7-63.1 26.8-130.2 40.3-199.3 40.3z" /> </svg>
