@@ -6,23 +6,21 @@ import { useEffect, useState } from 'react'
 
 const Header = () => {
     const { websitePages } = useAppContext()
-
     const [ isNavBarOpen, setIsNavBarOpen ] = useState(false)
 
     useEffect(() => {
-        console.log('overflow hidden')
         if (isNavBarOpen) {
-          document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
         } else {
-          document.body.style.overflow = 'auto';
+            document.body.style.overflow = 'auto';
         }
         return () => {
-          document.body.style.overflow = 'auto';
+            document.body.style.overflow = 'auto';
         };
       }, [isNavBarOpen]); 
 
     return (
-        <nav className={`fixed top-0 bg-white bg-opacity-50 backdrop-blur-md border-b w-full sm:text-sm${isNavBarOpen ? 'bg-white bg-opacity-50 backdrop-blur-md h-dvh' : ''}`}>
+        <nav className={`fixed top-0 bg-white bg-opacity-50 backdrop-blur-md border-b w-full sm:text-sm${isNavBarOpen ? 'bg-white bg-opacity-50 backdrop-blur-md h-lvh' : ''}`}>
             <div className="items-center px-4 max-w-screen-xl mx-auto sm:flex sm:px-8">
                 <div className="flex items-center justify-between py-3 sm:py-5 sm:block">
                     <a className='text-2xl' href="/">
@@ -50,8 +48,8 @@ const Header = () => {
                     <menu className="flex flex-col sm:items-center space-y-2 sm:flex-row sm:justify-end sm:space-x-3 sm:space-y-0">
                         {websitePages.map((item, idx) => {
                             return (
-                                <Link href={item.path} className='' onClick={() => setIsNavBarOpen(false)}>
-                                    <li key={idx} className="text-gray-700 p-3 sm:py-1 sm:px-2 hover:bg-transparent border border-transparent hover:border-blue-900 active:bg-blue-900 active:text-gray-200 rounded-2xl font-semibold">
+                                <Link key={idx} href={item.path} className='' onClick={() => setIsNavBarOpen(false)}>
+                                    <li className="text-gray-700 p-3 sm:py-1 sm:px-2 hover:bg-transparent border border-transparent hover:border-blue-900 active:bg-blue-900 active:text-gray-200 rounded-2xl font-semibold">
                                         <div className="block">
                                             {item.name}
                                         </div>
