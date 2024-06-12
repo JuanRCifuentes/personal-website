@@ -27,50 +27,65 @@ export const aboutData = {
 
 export const projectsData = [
     {
-        title: "Geoimec Web-Apps",
+        title: "Test Data Project",
+        kind: 'Data',
         description: "Full-stack web-app to manage and visualize data for an engineering company",
         tags: ["React", "Python", "GCP"],
-        img: "",
+        img: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?h=100",
+        link: "",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, magna et facilisis viverra, urna ante convallis ipsum, vitae condimentum enim eros vel velit. Praesent sed arcu eget orci consectetur tempus. Cras bibendum iaculis elementum. Maecenas ullamcorper posuere euismod. Sed laoreet lacinia libero. Vestibulum scelerisque lorem at lectus dignissim, sed auctor mauris laoreet. Cras a."
+    },
+    {
+        title: "Geoimec Web-Apps",
+        kind: 'Web Development',
+        description: "Full-stack web-app to manage and visualize data for an engineering company",
+        tags: ["React", "Python", "GCP"],
+        img: "https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?h=100",
         link: "",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, magna et facilisis viverra, urna ante convallis ipsum, vitae condimentum enim eros vel velit. Praesent sed arcu eget orci consectetur tempus. Cras bibendum iaculis elementum. Maecenas ullamcorper posuere euismod. Sed laoreet lacinia libero. Vestibulum scelerisque lorem at lectus dignissim, sed auctor mauris laoreet. Cras a."
     },
     {
         title: "VENKRA",
+        kind: 'Web Development',
         description: "Front-end app with firebase backend to manage and visualize data for a small business",
         tags: ["React", "GCP"],
-        img: "",
+        img: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?h=100",
         link: "https://www.venkra.com",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, magna et facilisis viverra, urna ante convallis ipsum, vitae condimentum enim eros vel velit. Praesent sed arcu eget orci consectetur tempus. Cras bibendum iaculis elementum. Maecenas ullamcorper posuere euismod. Sed laoreet lacinia libero. Vestibulum scelerisque lorem at lectus dignissim, sed auctor mauris laoreet. Cras a."
     },
     {
         title: "IoT Farming - Graduation Project",
+        kind: 'Web Development',
         description: "Full-stack web-app to control and monitor a Farmbot with IoT devices",
         tags: ["Python", "Flask"],
-        img: "",
+        img: "https://images.pexels.com/photos/1116302/pexels-photo-1116302.jpeg?h=100",
         link: "",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, magna et facilisis viverra, urna ante convallis ipsum, vitae condimentum enim eros vel velit. Praesent sed arcu eget orci consectetur tempus. Cras bibendum iaculis elementum. Maecenas ullamcorper posuere euismod. Sed laoreet lacinia libero. Vestibulum scelerisque lorem at lectus dignissim, sed auctor mauris laoreet. Cras a."
     },
     {
         title: "Last Personal Website",
+        kind: 'Web Development',
         description: "Full-stack personal website to showcase my projects and skills",
         tags: ["React", "Nextjs", ".NET" , "Azure"],
-        img: "",
+        img: "https://images.pexels.com/photos/688660/pexels-photo-688660.jpeg?h=100",
         link: "",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, magna et facilisis viverra, urna ante convallis ipsum, vitae condimentum enim eros vel velit. Praesent sed arcu eget orci consectetur tempus. Cras bibendum iaculis elementum. Maecenas ullamcorper posuere euismod. Sed laoreet lacinia libero. Vestibulum scelerisque lorem at lectus dignissim, sed auctor mauris laoreet. Cras a."
     },
     {
         title: "Especies Invasoras",
+        kind: 'Web Development',
         description: "Frontend website to showcase invasive species from API-Colombia",
         tags: ["React", "ChakraUI", "Azure"],
-        img: "",
+        img: "https://images.pexels.com/photos/12749793/pexels-photo-12749793.jpeg?h=100",
         link: "",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, magna et facilisis viverra, urna ante convallis ipsum, vitae condimentum enim eros vel velit. Praesent sed arcu eget orci consectetur tempus. Cras bibendum iaculis elementum. Maecenas ullamcorper posuere euismod. Sed laoreet lacinia libero. Vestibulum scelerisque lorem at lectus dignissim, sed auctor mauris laoreet. Cras a."
     },
     {
         title: "First Personal Website",
+        kind: 'Web Development',
         description: "A personal front-end website to showcase my projects and skills",
         tags: ["React", "Firebase"],
-        img: "",
+        img: "https://images.pexels.com/photos/9408469/pexels-photo-9408469.jpeg?h=100",
         link: "https://old.juanrcifuentes.com",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, magna et facilisis viverra, urna ante convallis ipsum, vitae condimentum enim eros vel velit. Praesent sed arcu eget orci consectetur tempus. Cras bibendum iaculis elementum. Maecenas ullamcorper posuere euismod. Sed laoreet lacinia libero. Vestibulum scelerisque lorem at lectus dignissim, sed auctor mauris laoreet. Cras a."
     },
