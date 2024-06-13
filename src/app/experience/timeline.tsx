@@ -51,7 +51,8 @@ const Timeline = () => {
                 ))}
             </menu>
             <ul className='flex flex-col relative container mx-auto px-6 gap-5'>
-                <div className='absolute z-0 w-2 h-full bg-white shadow-md left-[4.25rem] inset-0 md:mx-auto md:right-0 md:left-0'></div>
+                <div className='absolute z-0 w-2 h-full bg-white shadow-md left-[4.25rem] inset-0 md:mx-auto md:right-0 md:left-0' />
+                <div className='hidden sm:block absolute z-0 w-7 h-7 bottom-[-5px] rounded-full bg-white shadow-md left-[3.65rem] md:mx-auto md:right-0 md:left-0' />
                 {projectsList.map((experience, idx) => (
                     <TimelineCard key={idx} experience={experience} idx={idx}/>
                 ))}
