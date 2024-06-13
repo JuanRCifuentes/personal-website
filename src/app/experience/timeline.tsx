@@ -57,10 +57,10 @@ const Timeline = () => {
                             alt=''
                             className='h-24 w-24 object-cover rounded-full shadow-md border-4 border-white xs:absolute md:mx-auto md:left-0 md:right-0'
                         />
-                        <div className={`relative pt-2 xs:pl-28 xs:pt-0 md:w-1/2 md:ml-auto 
-                            ${idx%2===0? 'md:pl-16'
-                            :'md:ml-0 md:mr-auto md:pl-0 md:pr-16'}
-                            `}
+                        <div className={`relative pt-2 xs:pl-28 xs:pt-0 md:w-1/2  
+                            ${idx%2===0? 'md:ml-auto md:pl-16' // right
+                            : 'md:mr-auto md:ml-0 md:pl-0 md:pr-16' // left
+                            }`}
                         >
                             <div 
                                 className={`absolute inset-0 left-10 h-4 w-4 transform rotate-45 bg-white xs:top-11 xs:left-[104px] 
