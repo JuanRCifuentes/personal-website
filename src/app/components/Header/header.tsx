@@ -61,11 +61,11 @@ const Header = () => {
                         })}
                         <span className='hidden w-px h-6 bg-gray-300 sm:block'></span>
                         <div className='space-y-3 items-center gap-x-6 sm:flex sm:space-y-0'>
-                            <div className='flex justify-center'>
+                            <menu className='flex justify-center'>
                                 <li className="block p-1.5 mx-3 mb-2 sm:mb-0 text-lg text-center text-white bg-blue-900 hover:bg-white hover:text-blue-900 border-2 border-transparent hover:border-blue-900 rounded-full shadow w-min">
                                     <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9.173 14.83a4 4 0 1 1 5.657 -5.657"></path><path d="M11.294 12.707l.174 .247a7.5 7.5 0 0 0 8.845 2.492a9 9 0 0 1 -14.671 2.914"></path><path d="M3 12h1"></path><path d="M12 3v1"></path><path d="M5.6 5.6l.7 .7"></path><path d="M3 21l18 -18"></path></svg>
                                 </li>
-                            </div>
+                            </menu>
                         </div>
                     </menu>
                 </div>
