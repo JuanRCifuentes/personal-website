@@ -29,8 +29,8 @@ export const projectsData = [
     {
         title: "Test Data Project",
         kind: 'Data',
-        description: "Full-stack web-app to manage and visualize data for an engineering company",
-        tags: ["React", "Python", "GCP"],
+        description: "Data Project",
+        tags: ["React", "Python", "Flask"],
         img: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?h=100",
         link: "",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, magna et facilisis viverra, urna ante convallis ipsum, vitae condimentum enim eros vel velit. Praesent sed arcu eget orci consectetur tempus. Cras bibendum iaculis elementum. Maecenas ullamcorper posuere euismod. Sed laoreet lacinia libero. Vestibulum scelerisque lorem at lectus dignissim, sed auctor mauris laoreet. Cras a."
@@ -77,7 +77,7 @@ export const projectsData = [
         description: "Frontend website to showcase invasive species from API-Colombia",
         tags: ["React", "ChakraUI", "Azure"],
         img: "https://images.pexels.com/photos/12749793/pexels-photo-12749793.jpeg?h=100",
-        link: "",
+        link: "https://especiesinvasoras.api-colombia.com",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor, magna et facilisis viverra, urna ante convallis ipsum, vitae condimentum enim eros vel velit. Praesent sed arcu eget orci consectetur tempus. Cras bibendum iaculis elementum. Maecenas ullamcorper posuere euismod. Sed laoreet lacinia libero. Vestibulum scelerisque lorem at lectus dignissim, sed auctor mauris laoreet. Cras a."
     },
     {
