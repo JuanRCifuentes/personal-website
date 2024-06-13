@@ -78,7 +78,7 @@ const TimelineCard = ( props: {experience: IProjectData, idx: number}) => {
             }`}
         >
             <div 
-                className={`absolute inset-0 left-10 h-4 w-4 transform rotate-45 bg-white xs:top-11 xs:left-[104px] 
+                className={`absolute inset-0 left-10 h-4 w-4 transform rotate-45 bg-white xs:top-10 xs:left-[104px] 
                     ${idx%2===0? 'md:left-14'
                     : 'md:left-auto md:right-14'}`}
                 aria-hidden='true'
