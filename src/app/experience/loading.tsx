@@ -1,7 +1,9 @@
+import Timeline from "./timeline"
+
 export default function Loading() {
+    const listOfButtons = ['', '', '']
+  
     return (
-        <div>
-            Loading Experience...
-        </div>
+      <Timeline listOfButtons={listOfButtons} projectsData={[]} />
     )
 }
