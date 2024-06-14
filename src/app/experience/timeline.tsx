@@ -1,29 +1,19 @@
 'use client'
 
-import { useAppContext } from '@/context/appContext'
-import { IProjectData, fetchProjectsData } from '@/services/fetchService'
+import { IProjectData } from '@/services/fetchService'
 import React, { useEffect, useState } from 'react'
 
-const Timeline = () => {
-    const { projectsData, setProjectsData } = useAppContext()
-    const [ projectsList, setProjectsList ] = useState<IProjectData[]>(
-        projectsData.length > 0 ? projectsData : []
+const Timeline = (props: { listOfButtons: string[], projectsData: IProjectData[] }) => {
+    const { listOfButtons, projectsData } = props
+    const [ projectsList, setProjectsList ] = useState<IProjectData[]>( projectsData.length > 0 ? projectsData 
+        : [
+            { title: "", kind: '', description: "", tags: ["", ""], img: "", link: "", text: "" },
+            { title: "", kind: '', description: "", tags: ["", ""], img: "", link: "", text: "" },
+            { title: "", kind: '', description: "", tags: ["", ""], img: "", link: "", text: "" },
+            { title: "", kind: '', description: "", tags: ["", ""], img: "", link: "", text: "" },
+        ]
     )
     const [ selectedKind, setSelectedKind ] = useState('All')
-    const listOfButtons = ['All', 'Data', 'Web Development']
-
-    useEffect(() => {
-        if (projectsData.length === 0) {
-            fetchProjectsData()
-                .then(data => {
-                    if(data){ 
-                        setProjectsData(data)
-                        setProjectsList(data)
-                    }
-                })
-                .catch(error => { console.error(error) });
-        } 
-    } , [])
 
     useEffect(() => {
         if (selectedKind !== 'All') {
@@ -32,7 +22,7 @@ const Timeline = () => {
             setProjectsList(projectsData)
         }
 
-    }, [selectedKind])
+    }, [selectedKind, projectsData])
 
     return (
         <div>
